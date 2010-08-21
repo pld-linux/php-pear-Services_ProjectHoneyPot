@@ -1,19 +1,17 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Services
-%define		_subclass	ProjectHoneyPot
 %define		_status		alpha
 %define		_pearname	Services_ProjectHoneyPot
 Summary:	%{_pearname} - A package to interface the http:bl API of ProjectHoneyPot.org
 Summary(pl.UTF-8):	%{_pearname} - interfejs do API http:bl projektu ProjectHoneyPot.org
 Name:		php-pear-%{_pearname}
 Version:	0.5.2
-Release:	3
+Release:	4
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	e6011e571bac41ba520a53ebb12155f3
 URL:		http://pear.php.net/package/Services_ProjectHoneyPot/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Requires:	php-pear-Net_CheckIP2 >= 1.0.0-0.RC2
@@ -40,9 +38,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-AutoReq:	no
 Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
