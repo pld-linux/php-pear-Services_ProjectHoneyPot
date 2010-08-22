@@ -13,6 +13,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/package/Services_ProjectHoneyPot/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
 Requires:	php-pear-Net_CheckIP2 >= 1.0.0-0.RC2
 Requires:	php-pear-Net_DNS >= 1.0.0
