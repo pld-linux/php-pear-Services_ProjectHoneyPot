@@ -4,20 +4,21 @@
 Summary:	%{_pearname} - A package to interface the http:bl API of ProjectHoneyPot.org
 Summary(pl.UTF-8):	%{_pearname} - interfejs do API http:bl projektu ProjectHoneyPot.org
 Name:		php-pear-%{_pearname}
-Version:	0.5.2
-Release:	4
+Version:	0.5.3
+Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	e6011e571bac41ba520a53ebb12155f3
+# Source0-md5:	d46b44f86e381367685ce32d574ff428
 URL:		http://pear.php.net/package/Services_ProjectHoneyPot/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
-Requires:	php-pear-Net_CheckIP2 >= 1.0.0-0.RC2
+Requires:	php-pear-Net_CheckIP2 >= 1.0.0-0.RC3
 Requires:	php-pear-Net_DNS >= 1.0.0
 Requires:	php-pear-PEAR-core >= 1:1.4.0
+Requires:	php-spl
 Obsoletes:	php-pear-Services_ProjectHoneyPot-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
