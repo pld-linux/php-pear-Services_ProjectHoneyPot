@@ -1,22 +1,22 @@
+%define		status		beta
+%define		pearname	Services_ProjectHoneyPot
 %include	/usr/lib/rpm/macros.php
-%define		_status		alpha
-%define		_pearname	Services_ProjectHoneyPot
-Summary:	%{_pearname} - A package to interface the http:bl API of ProjectHoneyPot.org
-Summary(pl.UTF-8):	%{_pearname} - interfejs do API http:bl projektu ProjectHoneyPot.org
-Name:		php-pear-%{_pearname}
-Version:	0.5.3
+Summary:	%{pearname} - A package to interface the http:bl API of ProjectHoneyPot.org
+Summary(pl.UTF-8):	%{pearname} - interfejs do API http:bl projektu ProjectHoneyPot.org
+Name:		php-pear-%{pearname}
+Version:	0.6.0
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	d46b44f86e381367685ce32d574ff428
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	9dc38df7077f41f93e3e2c992e17e85c
 URL:		http://pear.php.net/package/Services_ProjectHoneyPot/
-BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
+BuildRequires:	php-pear-PEAR >= 1:1.9.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear
 Requires:	php-pear-Net_CheckIP2 >= 1.0.0-0.RC3
-Requires:	php-pear-Net_DNS >= 1.0.0
+Requires:	php-pear-Net_DNS2 >= 1.1.4
 Requires:	php-pear-PEAR-core >= 1:1.4.0
 Requires:	php-spl
 Obsoletes:	php-pear-Services_ProjectHoneyPot-tests
@@ -28,14 +28,14 @@ This package is used to determine if an IP or hostname are a) a search
 engine, b) suspicious, c) the ip of a harvester or/and d) of a comment
 spammer.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 Pakiet ten umożliwia określenie czy dany adres IP lub nazwa host to a)
 wyszukiwarka internetowa, b) podejrzany adres c) adres ip zbieracza
 adresów i/lub d) spammer.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
