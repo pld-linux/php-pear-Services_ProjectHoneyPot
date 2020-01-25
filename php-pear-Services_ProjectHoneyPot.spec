@@ -1,6 +1,5 @@
 %define		status		beta
 %define		pearname	Services_ProjectHoneyPot
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - A package to interface the http:bl API of ProjectHoneyPot.org
 Summary(pl.UTF-8):	%{pearname} - interfejs do API http:bl projektu ProjectHoneyPot.org
 Name:		php-pear-%{pearname}
